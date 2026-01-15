@@ -9,7 +9,7 @@ function Landing() {
         <div className="hero-background"></div>
         <div className="hero-content">
           <div className="hero-badge">
-            <span>🏘️ Community First</span>
+            <span>Community First</span>
           </div>
           <h1 className="hero-title">
             Report Issues.
@@ -206,7 +206,7 @@ function Landing() {
           <div className="footer-content">
             <div className="footer-brand">
               <div className="footer-logo">
-                <span className="brand-icon">🏘️</span>
+                <span className="brand-icon">╰➤</span>
                 <span className="brand-text">Community Report</span>
               </div>
               <p>Empowering communities through technology</p>

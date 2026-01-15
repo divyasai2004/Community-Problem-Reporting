@@ -494,3 +494,36 @@
     font-size: 36px;
   }
 }
+
+
+/* ---------------------- */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 50%, rgba(147, 51, 234, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
+  animation: pulse 20s ease-in-out infinite;
+}
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(147, 51, 234, 0.05) 50%, transparent 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(147, 51, 234, 0.03) 2px, rgba(147, 51, 234, 0.03) 4px);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
