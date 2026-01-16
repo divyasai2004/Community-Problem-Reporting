@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useEffect } from "react-router-dom";
 import "./Landing.css";
 
 function Landing() {
+  // Don't auto-redirect - always show landing page
+  // Users can manually navigate to dashboard/admin after login
+  
   return (
     <div className="landing-page">
       {/* Hero Section */}
@@ -46,7 +49,7 @@ function Landing() {
       </section>
 
       {/* Features Section */}
-      <section className="features-section">
+      <section id="features" className="features-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Why Choose Our Platform?</h2>
@@ -138,7 +141,7 @@ function Landing() {
       </section>
 
       {/* How It Works Section */}
-      <section className="how-it-works-section">
+      <section id="how-it-works" className="how-it-works-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">How It Works</h2>
@@ -216,19 +219,19 @@ function Landing() {
                 <h4>Platform</h4>
                 <Link to="/login">Sign In</Link>
                 <Link to="/register">Sign Up</Link>
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
+                <a href="#features" onClick={(e) => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }}>Features</a>
+                <a href="#how-it-works" onClick={(e) => { e.preventDefault(); document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }}>How It Works</a>
               </div>
               <div className="footer-column">
                 <h4>Support</h4>
-                <a href="#help">Help Center</a>
-                <a href="#contact">Contact Us</a>
-                <a href="#faq">FAQ</a>
+                <Link to="/login">Help Center</Link>
+                <Link to="/register">Contact Us</Link>
+                <a href="#how-it-works" onClick={(e) => { e.preventDefault(); document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }}>FAQ</a>
               </div>
               <div className="footer-column">
                 <h4>Legal</h4>
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
+                <a href="#features" onClick={(e) => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }}>Privacy Policy</a>
+                <a href="#how-it-works" onClick={(e) => { e.preventDefault(); document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }}>Terms of Service</a>
               </div>
             </div>
           </div>
